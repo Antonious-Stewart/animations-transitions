@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Montserrat");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(150deg, #9055A2, #2E294E); }
+
+body {
+  font-family: "Montserrat",sans-serif;
+  font-weight: 100; }
+
+.header__primary-heading {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 6.4rem;
+  text-align: center;
+  letter-spacing: 1.2rem;
+  padding-top: 22rem;
+  background: linear-gradient(45deg, #D499B9 45%, #9055A2);
+  display: block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  border-bottom: solid 2px white;
+  width: 95%;
+  margin: auto;
+  font-weight: 200; }
+
+.header__span {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 3.2rem;
+  display: block;
+  text-align: center;
+  background: linear-gradient(45deg, #D499B9 60%, #9055A2 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding-top: 2rem;
+  letter-spacing: 1rem;
+  font-weight: 200; }
+
+.bar__heading {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: white;
+  font-style: italic; }
+
+.social {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 100;
+  display: flex;
+  list-style: none; }
+  .social__item {
+    margin: 0 2rem; }
+  .social__link:link, .social__link:visited {
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: white;
+    text-align: center; }
+  .social__link .fab {
+    color: #2E294E;
+    font-size: 2.4rem;
+    line-height: 1.4; }
+  .social__link .far {
+    color: #2E294E;
+    font-size: 2.4rem;
+    line-height: 1.4; }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc((100% - 6rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc((100% - 2 * 6rem) / 4); }
+  .row .col-1-of-5 {
+    width: calc((100% - 4 * 6rem) / 5); }
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg, rgba(1, 22, 56, 0.9), rgba(46, 41, 78, 0.9)), url("../imgs/pexels-photo-97077.jpeg") center/cover no-repeat;
+  border: solid 5px #9055A2;
+  border-radius: .1rem;
+  box-shadow: inset 0 0.2rem 2rem #9055A2, inset 0 0.2rem 3rem #9055A2; }
+
+.programming {
+  list-style: none;
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+  display: flex; }
+  .programming .fab {
+    margin: 0 3rem;
+    font-size: 8rem;
+    display: block;
+    background: linear-gradient(120deg, #D499B9 45%, #9055A2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; }
+
+.navigation-side {
+  background: #282c37;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .navigation-side__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column; }
+  .navigation-side__item {
+    position: relative; }
+    .navigation-side__item:not(:last-child) {
+      margin-bottom: .5rem; }
+    .navigation-side__item::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 3px;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: transform 0.2s cubic-bezier(1, 0, 0, 1), width 0.2s 0.4s;
+      background: #D499B9;
+      content: ""; }
+    .navigation-side__item:hover::before {
+      transform: scaleY(1);
+      width: 100%; }
+  .navigation-side__link:link, .navigation-side__link:visited {
+    display: inline-block;
+    width: 100%;
+    padding: 3rem;
+    font-size: 2.2rem;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    transition: all .2s; }
+    .navigation-side__link:link:hover, .navigation-side__link:visited:hover {
+      text-shadow: -0.8rem 0.4rem 1rem rgba(0, 0, 0, 0.8); }
+      .navigation-side__link:link:hover:active, .navigation-side__link:visited:hover:active {
+        background: #c575a0; }
+  .navigation-side__footer {
+    text-align: center;
+    padding: 2rem 0; }
+    .navigation-side__footer__span {
+      display: inline-block;
+      color: white;
+      font-size: 1.2rem;
+      letter-spacing: .6rem; }
+      .navigation-side__footer__span--1 {
+        border-bottom: solid 1px white;
+        padding-bottom: .5rem;
+        width: 80%;
+        margin-bottom: .6rem; }
+
+.main {
+  padding: 4rem; }
+
+.panel {
+  display: flex;
+  background: white;
+  width: 100%;
+  height: 100rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5); }
+  .panel--left {
+    flex: 1 0 0; }
+  .panel--right {
+    background: white;
+    flex: 4 0 0; }
+    .panel--right .about {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column; }
+      .panel--right .about__heading {
+        font-family: "Julius Sans One", sans-serif;
+        width: 50%; }
+      .panel--right .about__bio {
+        width: 50%; }
+      .panel--right .about__img {
+        display: inline-block; }

@@ -1,0 +1,15 @@
+{
+  "name": "antonious-stewart",
+  "version": "1.0.0",
+  "description": "official site",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass":"node-sass -w scss/ -o stylesheets/ -r",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "antonious stewart",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}

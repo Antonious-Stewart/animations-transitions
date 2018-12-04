@@ -1,0 +1,34 @@
+.main{
+  padding: 4rem;
+}
+.panel{
+  display: flex;
+  background: white;
+  width: 100%;
+  height:100rem;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.5);
+
+  &--left{
+    flex:1 0 0;
+  }
+  &--right{
+    background: white;
+    flex:4 0 0;
+    .about{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      &__heading{
+        font-family: "Julius Sans One", sans-serif;
+        width: 50%;
+      }
+      &__bio{
+        width: 50%;
+      }
+      &__img{
+        display: inline-block;
+        
+      }
+    }
+  }
+}
