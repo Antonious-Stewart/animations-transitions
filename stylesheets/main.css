@@ -82,6 +82,31 @@ body {
     font-size: 2.4rem;
     line-height: 1.4; }
 
+.btn:link, .btn:visited {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6rem;
+  color: #011638;
+  padding: 1.5rem 2.5rem;
+  border: solid 2px #9055A2;
+  transform: skew(-7deg);
+  transition: all .3s;
+  backface-visibility: hidden;
+  font-weight: 700;
+  letter-spacing: .2rem; }
+  .btn:link > *, .btn:visited > * {
+    transform: skew(7deg); }
+  .btn:link:hover, .btn:visited:hover {
+    background: #9055A2;
+    border: none;
+    color: white;
+    transform: skew(-7deg) translateY(-0.5rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.502); }
+    .btn:link:hover:active, .btn:visited:hover:active {
+      background: #a774b6;
+      transform: skew(-7deg) translateY(-0.3rem);
+      box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.502); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -141,6 +166,7 @@ body {
     display: flex;
     flex-direction: column; }
   .navigation-side__item {
+    backface-visibility: hidden;
     position: relative; }
     .navigation-side__item:not(:last-child) {
       margin-bottom: .5rem; }
@@ -202,13 +228,25 @@ body {
     background: white;
     flex: 4 0 0; }
     .panel--right .about {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column; }
-      .panel--right .about__heading {
+      padding: 2rem 2.5rem;
+      color: #282c37; }
+      .panel--right .about__primary-heading {
+        text-align: center;
+        font-size: 5rem;
+        color: #282c37;
+        margin-bottom: 8rem;
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+        opacity: .6; }
+      .panel--right .about__secondary-heading {
         font-family: "Julius Sans One", sans-serif;
-        width: 50%; }
+        display: inline-block;
+        font-size: 1.6rem;
+        color: #011638;
+        border-bottom: dashed 1px #9055A2;
+        padding-bottom: 2px;
+        letter-spacing: .6rem; }
       .panel--right .about__bio {
-        width: 50%; }
-      .panel--right .about__img {
-        display: inline-block; }
+        padding: 1rem 0;
+        font-size: 1.2rem;
+        margin-bottom: 2rem; }
