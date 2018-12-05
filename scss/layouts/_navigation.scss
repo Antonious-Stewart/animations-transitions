@@ -10,6 +10,7 @@
     
   }
   &__item{
+    backface-visibility: hidden;
     &:not(:last-child){
         margin-bottom: .5rem;
       }

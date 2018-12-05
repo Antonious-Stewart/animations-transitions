@@ -1,0 +1,33 @@
+.btn{
+  
+  &:link,
+  &:visited{
+    text-decoration: none;
+    display: inline-block;
+    font-size: $default-font-size;
+    color: $primary-color;
+    padding: 1.5rem 2.5rem;
+    border:solid 2px $tertiary-color;
+    transform: skew(-7deg);
+    transition: all .3s;
+    backface-visibility: hidden;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    & > *{
+      transform: skew(7deg);
+    }
+    &:hover{
+      background: $tertiary-color;
+      border: none;
+      color: white;
+      transform: skew(-7deg) translateY(-.5rem);
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.502);
+      &:active{
+        background: lighten($tertiary-color,10%);
+        transform: skew(-7deg) translateY(-.3rem);
+        box-shadow: 0 .6rem 1rem rgba(0, 0, 0, 0.502); 
+      }
+    }
+  }
+  
+}
