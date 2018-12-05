@@ -4,7 +4,7 @@
   "description": "official site",
   "main": "index.js",
   "scripts": {
-    "watch:sass":"node-sass -w scss/ -o stylesheets/ -r",
+    "watch:sass": "node-sass -w scss/ -o stylesheets/ -r",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "antonious stewart",
