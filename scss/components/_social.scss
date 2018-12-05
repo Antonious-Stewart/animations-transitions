@@ -1,5 +1,5 @@
 .social{
-  position: fixed;
+  position: absolute;
   top:2rem;
   left: 2rem;
   z-index: 100;
@@ -34,9 +34,39 @@
     }
   }
 }
-
-// line-height: 1.8; 
-// height: 5rem;
-// width: 5rem;
-// transform: rotate(-45deg) skewX(25deg);
-// background: white;
+.about-social{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  list-style: none;
+  &__item{
+    margin: 0 2rem;
+  }
+  &__link{
+    &:link,
+    &:visited{
+      display: block;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      background: white;
+      text-align: center;
+      &:hover{
+        
+      }
+    }
+    
+    & .fab{
+      color: $secondary-color;
+      font-size: 2.4rem;
+      line-height: 1.4;
+    }
+    & .far{
+      color: $secondary-color;
+      font-size: 2.4rem;
+      line-height: 1.4;
+    }
+  }
+}

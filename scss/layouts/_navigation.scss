@@ -3,6 +3,7 @@
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   font-family: "Julius Sans One", sans-serif;
   &__list{
     list-style: none;
     display: flex;
@@ -35,6 +36,7 @@
   &__link{
     &:link,
     &:visited{
+      letter-spacing: 2px;
       display: inline-block;
       width: 100%;
       padding: 3rem;
