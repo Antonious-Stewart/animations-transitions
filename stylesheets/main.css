@@ -12,7 +12,7 @@ body {
 
 .container {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background: linear-gradient(150deg, #9055A2, #2E294E); }
 
 body {
@@ -101,7 +101,10 @@ body {
   .about-social__link .fab {
     color: #2E294E;
     font-size: 2.4rem;
-    line-height: 1.4; }
+    line-height: 1.4;
+    transition: color .2s ease-out; }
+    .about-social__link .fab:hover {
+      color: #D499B9; }
   .about-social__link .far {
     color: #2E294E;
     font-size: 2.4rem;
@@ -116,7 +119,7 @@ body {
   padding: 1.5rem 2.5rem;
   border: solid 2px #9055A2;
   transform: skew(-7deg);
-  transition: all .3s;
+  transition: all .3s ease-out;
   backface-visibility: hidden;
   font-weight: 900;
   letter-spacing: .2rem; }
@@ -191,12 +194,19 @@ body {
   .navigation-side__list {
     list-style: none;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    left: 0; }
   .navigation-side__item {
     backface-visibility: hidden;
     position: relative; }
     .navigation-side__item:not(:last-child) {
       margin-bottom: .5rem; }
+    .navigation-side__item--active {
+      width: 100%;
+      transform: scaleY(1);
+      background: #D499B9; }
     .navigation-side__item::before {
       position: absolute;
       top: 0;
@@ -227,6 +237,8 @@ body {
       text-shadow: -0.8rem 0.4rem 1rem rgba(0, 0, 0, 0.8); }
       .navigation-side__link:link:hover:active, .navigation-side__link:visited:hover:active {
         background: #c575a0; }
+  .navigation-side__link--active {
+    text-shadow: -0.8rem 0.4rem 1rem rgba(0, 0, 0, 0.8); }
   .navigation-side__footer {
     text-align: center;
     padding: 2rem 0; }
@@ -248,15 +260,15 @@ body {
   display: flex;
   background: white;
   width: 100%;
-  height: 100rem;
+  height: 100%;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5); }
   .panel--left {
     flex: 1 0 0; }
   .panel--right {
     background: white;
-    flex: 4 0 0; }
+    flex: 4 0 0;
+    padding: 2rem 2.5rem; }
     .panel--right .about {
-      padding: 2rem 2.5rem;
       position: relative;
       height: 50rem;
       color: #282c37; }
@@ -281,3 +293,23 @@ body {
         padding: 1rem 0;
         font-size: 1.2rem;
         margin-bottom: 2rem; }
+    .panel--right .projects {
+      margin-top: 8rem; }
+      .panel--right .projects__heading {
+        font-family: "Julius Sans One", sans-serif;
+        text-align: center;
+        font-size: 5rem;
+        color: #282c37;
+        margin-bottom: 8rem;
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+        opacity: .6; }
+      .panel--right .projects__img {
+        height: 20rem;
+        width: 30rem;
+        border: solid 2px #D499B9;
+        box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.8);
+        margin: 0 auto; }
+      .panel--right .projects__info {
+        text-align: center;
+        margin-top: 7.5rem; }

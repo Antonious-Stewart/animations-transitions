@@ -8,7 +8,9 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    
+    position: sticky;
+    top: 0;
+    left: 0;
   }
   &__item{
     backface-visibility: hidden;
@@ -16,6 +18,11 @@
         margin-bottom: .5rem;
       }
       position: relative;
+      &--active{
+        width: 100%;
+        transform: scaleY(1);
+        background: $quarternary-color;
+      }
       &::before{
         position: absolute;
         top: 0;
@@ -27,6 +34,7 @@
         transition: transform .2s cubic-bezier(1,0,0,1), width .2s .4s;
         background: $quarternary-color;
         content: "";
+        
       }
       &:hover::before{
         transform: scaleY(1);
@@ -52,7 +60,12 @@
         &:active{
           background: darken($quarternary-color,10%);
         }
+        
       }
+      
+    }
+    &--active{
+      text-shadow: -.8rem .4rem 1rem rgba(0,0,0,.8);
     }
   }
   &__footer{

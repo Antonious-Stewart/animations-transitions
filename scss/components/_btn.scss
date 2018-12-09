@@ -10,7 +10,7 @@
     padding: 1.5rem 2.5rem;
     border:solid 2px $tertiary-color;
     transform: skew(-7deg);
-    transition: all .3s;
+    transition: all .3s ease-out;
     backface-visibility: hidden;
     font-weight: 900;
     letter-spacing: .2rem;
