@@ -13,11 +13,11 @@
   }
   &--right{
     background: white;
-    flex:4 0 0;
+    flex:1 0 75rem;
     padding: 2rem 2.5rem;
+    position: relative;
     .about{
       
-      position: relative;
       height: 50rem;
       color:$color-black;
       &__primary-heading{
@@ -50,8 +50,8 @@
       }
     }
     .projects{
-
-      margin-top: 8rem;
+      
+      
       &__heading{
         font-family: "Julius Sans One", sans-serif;
         text-align: center;
@@ -70,8 +70,20 @@
         margin: 0 auto;
       }
       &__info{
+        &__list{}
+        &__item{}
+      }
+    }
+    .contact{
+      &__heading{
+        font-family: "Julius Sans One", sans-serif;
         text-align: center;
-        margin-top: 7.5rem;
+        font-size: 5rem;
+        color:$color-black;
+        margin-bottom: $gutter-v;
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+        opacity: .6;
       }
     }
   }
