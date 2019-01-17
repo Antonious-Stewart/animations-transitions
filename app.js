@@ -14,7 +14,7 @@ window.onload = ()=>{
   
   setTimeout(()=>{
     document.querySelector(".panel--right").classList.remove("spinner-2");
-    document.querySelector("#about-section").style.display="block";
+    document.querySelector("#home-section").style.display="block";
   },5500)
 }
 
