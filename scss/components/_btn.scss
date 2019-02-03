@@ -1,34 +1,24 @@
 .btn{
-  
+  &,
   &:link,
   &:visited{
-    font-family: "Julius Sans One", sans-serif;
-    text-decoration: none;
     display: inline-block;
-    font-size: $default-font-size;
-    color: $primary-color;
-    padding: 1.5rem 2.5rem;
-    border:solid 2px $tertiary-color;
-    transform: skew(-7deg);
-    transition: all .3s ease-out;
+    border: solid 2px white;
+    border-radius: 5rem;
+    width:20%;
+    padding: 1rem;
+    text-decoration: none;
+    color:grey;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background:linear-gradient(105deg, #fff, #bbb) ;
+    text-align: center;
+    letter-spacing: .5rem;
+    transition: all .2s ease-in;
     backface-visibility: hidden;
-    font-weight: 900;
-    letter-spacing: .2rem;
-    & > *{
-      transform: skew(7deg);
-    }
     &:hover{
-      background: $tertiary-color;
-      border: none;
-      color: white;
-      transform: skew(-7deg) translateY(-.5rem);
-      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.502);
-      &:active{
-        background: lighten($tertiary-color,10%);
-        transform: skew(-7deg) translateY(-.3rem);
-        box-shadow: 0 .6rem 1rem rgba(0, 0, 0, 0.502); 
-      }
+      transform: scale(1.1);
+      box-shadow:0 0 3rem rgba(210,210,210,.4);
     }
   }
-  
 }

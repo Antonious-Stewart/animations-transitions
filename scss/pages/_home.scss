@@ -1,171 +1,49 @@
-.main{
-  padding: 4rem;
-}
-.panel{
+.load-wrapper{
+  background: blue;
   display: flex;
-  background: white;
-  width: 100%;
-  height:100%;
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.5);
-  &--left{
-    flex:1 0 0;
-  }
-  &--right{
-    background: white;
-    flex:1 0 75rem;
-    padding: 2rem 2.5rem;
-    position: relative;
-    .home{
-
-      width: 95%;
-      margin:0 auto;
-      font-size: 3.5rem;
-      font-family: "Julius Sans One", sans-serif;
-      &__welcome{
-        text-align: center;
-        font-size: 5rem;
-        color:$color-black;
-        margin-bottom: $gutter-v;
-        letter-spacing: 1rem;
-        text-transform: uppercase;
-        opacity: .6;
-      }
-      .home__heading--primary span{
-        font-size: 5.5rem;
-        transform: skewX(-20deg);
-        display: inline-block;
-        color: transparent;
-        font-weight: 900;
-        background: linear-gradient(to bottom,$tertiary-color 50%,$quarternary-color 50%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        text-shadow:0 0 3px rgba($secondary-color,.8),0 0 5px rgba($secondary-color,.8) ;
-        border-bottom: solid $tertiary-color 3px;
-      }
-       .home__heading--secondary span{
-        position: relative;
-        color:transparent;
-        &[data-text="Frontend"]{
-        &::before{
-          content: attr(data-text);
-          color:black;
-          position: absolute;
-          text-align: center;
-          top:0;
-          left: 0;
-          z-index: 2;
-          width: 100%;
-          border-right: solid 1px black;
-          animation: type 1s steps(8)  1  forwards;
-          overflow: hidden;
-        }
-      }
-
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.loader{
+  position: relative;
+  display: flex;
+  span{
+    color:blue;
+    margin: 0 1.5rem;
+    font-size: 10rem;
+    font-weight: bold;
+    animation: load  2.4s linear infinite;
+    font-family:"Bungee Shade", cursive;
+    &:nth-child(1){
+      animation-delay: 0;
     }
-      &__heading--primary{
-        
-      }
-      &__heading--secondary{}
+    &:nth-child(2){
+      animation-delay: 0.2s;
     }
-    .about{
-      height: 50rem;
-      color:$color-black;
-      &__primary-heading{
-        font-family: "Julius Sans One", sans-serif;
-        text-align: center;
-        font-size: 5rem;
-        color:$color-black;
-        margin-bottom: $gutter-v;
-        letter-spacing: 1rem;
-        text-transform: uppercase;
-        opacity: .6;
-      }
-      &__secondary-heading{
-        font-family: "Julius Sans One", sans-serif;
-        display: inline-block;
-        font-size: $default-font-size;
-        color:$primary-color;
-        border-bottom: dashed 1px $tertiary-color;
-        padding-bottom: 2px;
-        letter-spacing: .6rem;
-      }
-      &__bio{
-        padding: 1rem 0;
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-      }
+    &:nth-child(3){
+      animation-delay: 0.4s;
     }
-    .projects{
-      &__heading{
-        font-family: "Julius Sans One", sans-serif;
-        text-align: center;
-        font-size: 5rem;
-        color:$color-black;
-        margin-bottom: $gutter-v;
-        letter-spacing: 1rem;
-        text-transform: uppercase;
-        opacity: .6;
-      }
-      &__img{
-        height: 20rem;
-        width: 30rem;
-        border: solid 2px $quarternary-color;
-        box-shadow: 0 0 .8rem rgba(0,0,0,.8);
-        margin: 0 auto;
-        img{
-          width: 100%;
-          height: 100%;
-          transition: all .2s linear;
-          &:hover{
-            transform: scale(1.8);
-            height: 100%;
-            width: auto;
-            box-shadow: 0 0 2rem rgba(0,0,0,.8);
-          }
-        }
-      }
-      &__info{
-        &__list{}
-        &__item{
-          a{
-            &,
-            &:link,
-            &:visited{
-              text-transform: capitalize;
-              color:$primary-color;
-            }
-          }
-          h2{
-            font-size: 1.6rem;
-            text-transform: uppercase;
-            display: inline-block;  
-          }
-          p{}
-          span{
-            color: $primary-color;
-            text-transform: uppercase;
-            & + span{
-              color:$tertiary-color;
-            }
-          }
-          font-size: 1.4rem;
-          &:not(:last-child){
-            margin-bottom: .5rem;
-          }
-        }
-      }
+    &:nth-child(4){
+      animation-delay: 0.6s;
     }
-    .contact{
-      &__heading{
-        font-family: "Julius Sans One", sans-serif;
-        text-align: center;
-        font-size: 5rem;
-        color:$color-black;
-        margin-bottom: $gutter-v;
-        letter-spacing: 1rem;
-        text-transform: uppercase;
-        opacity: .6;
-      }
+    &:nth-child(5){
+      animation-delay: 0.8s;
+    }
+    &:nth-child(6){
+      animation-delay: 1s;
+    }
+    &:nth-child(7){
+      animation-delay: 1.2s;
+    }
+    &:nth-child(8){
+      animation-delay: 1.4s;
+    }
+    &:nth-child(9){
+      animation-delay: 1.6s;
+    }
+    &:nth-child(10){
+      animation-delay: 1.8s;
     }
   }
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Akronim|Bungee+Shade|Press+Start+2P");
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -10,416 +10,106 @@ html {
 body {
   box-sizing: border-box; }
 
-.container {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(150deg, #9055A2, #2E294E); }
-
-body {
-  font-family: "Montserrat",sans-serif;
-  font-weight: 100; }
-
-.header__primary-heading {
-  font-family: "Julius Sans One", sans-serif;
-  font-size: 6.4rem;
-  text-align: center;
-  letter-spacing: 1.2rem;
-  padding-top: 22rem;
-  background: linear-gradient(45deg, #D499B9 45%, #9055A2);
-  display: block;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  border-bottom: solid 2px white;
-  width: 95%;
-  margin: auto;
-  font-weight: 200; }
-
-.header__span {
-  font-family: "Julius Sans One", sans-serif;
-  font-size: 3.2rem;
-  display: block;
-  text-align: center;
-  background: linear-gradient(45deg, #D499B9 60%, #9055A2 80%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  padding-top: 2rem;
-  letter-spacing: 1rem;
-  font-weight: 200; }
-
-.bar__heading {
-  font-family: "Julius Sans One", sans-serif;
-  font-size: 3.2rem;
-  font-weight: 800;
-  letter-spacing: 1rem;
-  text-transform: uppercase;
-  color: white;
-  font-style: italic; }
-
-@keyframes spinner {
-  to {
-    transform: rotate(360deg); } }
-
-@keyframes type {
+@keyframes shine {
   0% {
-    width: 0; }
-  50% {
-    width: 50%; }
+    background-position: -500%; }
   100% {
-    width: 100%;
-    border-right: none; } }
+    background-position: 500%; } }
 
-.social {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  z-index: 100;
-  display: flex;
-  list-style: none; }
-  .social__item {
-    margin: 0 2rem; }
-  .social__link:link, .social__link:visited {
-    display: block;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background: white;
-    text-align: center; }
-  .social__link .fab {
-    color: #2E294E;
-    font-size: 2.4rem;
-    line-height: 1.4; }
-  .social__link .far {
-    color: #2E294E;
-    font-size: 2.4rem;
-    line-height: 1.4; }
+@keyframes load {
+  0% {
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0);
+    transform: scale(1); }
+  40% {
+    text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: scale(1.4); }
+  80%, 100% {
+    text-shadow: 0 0 1rem rgab(0, 0, 0, 0);
+    transform: scale(1); } }
 
-.about-social {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 100;
-  display: flex;
-  list-style: none; }
-  .about-social__item {
-    margin: 0 2rem; }
-  .about-social__link:link, .about-social__link:visited {
-    display: block;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    background: white;
-    text-align: center; }
-  .about-social__link .fab {
-    color: #2E294E;
-    font-size: 2.4rem;
-    line-height: 1.4;
-    transition: color .2s ease-out; }
-    .about-social__link .fab:hover {
-      color: #D499B9; }
-  .about-social__link .far {
-    color: #2E294E;
-    font-size: 2.4rem;
-    line-height: 1.4; }
-
-.spinner-1:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  margin-right: 8rem;
-  margin-top: -12rem;
-  height: 25rem;
-  width: 25rem;
-  border-radius: 50%;
-  border-top: solid #011638 2px;
-  border-right: solid 2px transparent;
-  animation: spinner .7s linear infinite; }
-
-.spinner-2:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  margin-right: 8rem;
-  margin-top: -12rem;
-  height: 25rem;
-  width: 25rem;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  border-top-color: #011638;
-  border-bottom-color: #011638;
-  animation: spinner .7s ease infinite; }
-
-.btn:link, .btn:visited {
-  font-family: "Julius Sans One", sans-serif;
-  text-decoration: none;
+.btn, .btn:link, .btn:visited {
   display: inline-block;
-  font-size: 1.6rem;
-  color: #011638;
-  padding: 1.5rem 2.5rem;
-  border: solid 2px #9055A2;
-  transform: skew(-7deg);
-  transition: all .3s ease-out;
-  backface-visibility: hidden;
-  font-weight: 900;
-  letter-spacing: .2rem; }
-  .btn:link > *, .btn:visited > * {
-    transform: skew(7deg); }
-  .btn:link:hover, .btn:visited:hover {
-    background: #9055A2;
-    border: none;
-    color: white;
-    transform: skew(-7deg) translateY(-0.5rem);
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.502); }
-    .btn:link:hover:active, .btn:visited:hover:active {
-      background: #a774b6;
-      transform: skew(-7deg) translateY(-0.3rem);
-      box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.502); }
+  border: solid 2px white;
+  border-radius: 5rem;
+  width: 20%;
+  padding: 1rem;
+  text-decoration: none;
+  color: grey;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background: linear-gradient(105deg, #fff, #bbb);
+  text-align: center;
+  letter-spacing: .5rem;
+  transition: all .2s ease-in;
+  backface-visibility: hidden; }
+  .btn:hover, .btn:link:hover, .btn:visited:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 3rem rgba(210, 210, 210, 0.4); }
 
-.row {
-  max-width: 114rem;
-  margin: 0 auto; }
-  .row::after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-  .row [class^="col-"] {
-    float: left; }
-    .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
-  .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); }
-  .row .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3); }
-  .row .col-2-of-3 {
-    width: calc((100% - 6rem) / 3); }
-  .row .col-1-of-4 {
-    width: calc((100% - 3 * 6rem) / 4); }
-  .row .col-2-of-4 {
-    width: calc((100% - 2 * 6rem) / 4); }
-  .row .col-1-of-5 {
-    width: calc((100% - 4 * 6rem) / 5); }
+.load-wrapper {
+  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
 
-.header {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(-45deg, rgba(1, 22, 56, 0.9), rgba(46, 41, 78, 0.9)), url("../imgs/pexels-photo-97077.jpeg") center/cover no-repeat;
-  border: solid 5px #9055A2;
-  border-radius: .1rem;
-  box-shadow: inset 0 0.2rem 2rem #9055A2, inset 0 0.2rem 3rem #9055A2; }
-
-.programming {
-  list-style: none;
-  position: absolute;
-  bottom: 4rem;
-  right: 4rem;
+.loader {
+  position: relative;
   display: flex; }
-  .programming .fab {
-    margin: 0 3rem;
-    font-size: 8rem;
-    display: block;
-    background: linear-gradient(120deg, #D499B9 45%, #9055A2);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; }
+  .loader span {
+    color: blue;
+    margin: 0 1.5rem;
+    font-size: 10rem;
+    font-weight: bold;
+    animation: load  2.4s linear infinite;
+    font-family: "Bungee Shade", cursive; }
+    .loader span:nth-child(1) {
+      animation-delay: 0; }
+    .loader span:nth-child(2) {
+      animation-delay: 0.2s; }
+    .loader span:nth-child(3) {
+      animation-delay: 0.4s; }
+    .loader span:nth-child(4) {
+      animation-delay: 0.6s; }
+    .loader span:nth-child(5) {
+      animation-delay: 0.8s; }
+    .loader span:nth-child(6) {
+      animation-delay: 1s; }
+    .loader span:nth-child(7) {
+      animation-delay: 1.2s; }
+    .loader span:nth-child(8) {
+      animation-delay: 1.4s; }
+    .loader span:nth-child(9) {
+      animation-delay: 1.6s; }
+    .loader span:nth-child(10) {
+      animation-delay: 1.8s; }
 
-.navigation-side {
-  background: #282c37;
+.landing-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
   flex-direction: column;
-  justify-content: space-between;
-  font-family: "Julius Sans One", sans-serif; }
-  .navigation-side__list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    position: sticky;
-    top: 0;
-    left: 0; }
-  .navigation-side__item {
-    backface-visibility: hidden;
-    position: relative; }
-    .navigation-side__item:not(:last-child) {
-      margin-bottom: .5rem; }
-    .navigation-side__item--active {
-      width: 100%;
-      transform: scaleY(1);
-      background: #D499B9; }
-    .navigation-side__item::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 3px;
-      transform: scaleY(0);
-      transform-origin: center;
-      transition: transform 0.2s cubic-bezier(1, 0, 0, 1), width 0.2s 0.4s;
-      background: #D499B9;
-      content: ""; }
-    .navigation-side__item:hover::before {
-      transform: scaleY(1);
-      width: 100%; }
-  .navigation-side__link:link, .navigation-side__link:visited {
-    letter-spacing: 2px;
-    display: inline-block;
-    width: 100%;
-    padding: 3rem;
-    font-size: 2.2rem;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    position: relative;
-    z-index: 3;
-    transition: all .2s; }
-    .navigation-side__link:link:hover, .navigation-side__link:visited:hover {
-      text-shadow: -0.8rem 0.4rem 1rem rgba(0, 0, 0, 0.8); }
-      .navigation-side__link:link:hover:active, .navigation-side__link:visited:hover:active {
-        background: #c575a0; }
-  .navigation-side__link--active {
-    text-shadow: -0.8rem 0.4rem 1rem rgba(0, 0, 0, 0.8); }
-  .navigation-side__footer {
-    text-align: center;
-    padding: 2rem 0; }
-    .navigation-side__footer__span {
-      display: inline-block;
-      color: white;
-      font-size: 1.2rem;
-      letter-spacing: .6rem; }
-      .navigation-side__footer__span--1 {
-        border-bottom: solid 1px white;
-        padding-bottom: .5rem;
-        width: 80%;
-        margin-bottom: .6rem; }
+  color: white; }
 
-.main {
-  padding: 4rem; }
+.landing-page__primary-heading, .landing-page__secondary-heading {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Press Start 2P",cursive;
+  font-size: 6rem;
+  letter-spacing: 1rem;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  margin-bottom: 4rem; }
 
-.panel {
-  display: flex;
-  background: white;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5); }
-  .panel--left {
-    flex: 1 0 0; }
-  .panel--right {
-    background: white;
-    flex: 1 0 75rem;
-    padding: 2rem 2.5rem;
-    position: relative; }
-    .panel--right .home {
-      width: 95%;
-      margin: 0 auto;
-      font-size: 3.5rem;
-      font-family: "Julius Sans One", sans-serif; }
-      .panel--right .home__welcome {
-        text-align: center;
-        font-size: 5rem;
-        color: #282c37;
-        margin-bottom: 8rem;
-        letter-spacing: 1rem;
-        text-transform: uppercase;
-        opacity: .6; }
-      .panel--right .home .home__heading--primary span {
-        font-size: 5.5rem;
-        transform: skewX(-20deg);
-        display: inline-block;
-        color: transparent;
-        font-weight: 900;
-        background: linear-gradient(to bottom, #9055A2 50%, #D499B9 50%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        text-shadow: 0 0 3px rgba(46, 41, 78, 0.8), 0 0 5px rgba(46, 41, 78, 0.8);
-        border-bottom: solid #9055A2 3px; }
-      .panel--right .home .home__heading--secondary span {
-        position: relative;
-        color: transparent; }
-        .panel--right .home .home__heading--secondary span[data-text="Frontend"]::before {
-          content: attr(data-text);
-          color: black;
-          position: absolute;
-          text-align: center;
-          top: 0;
-          left: 0;
-          z-index: 2;
-          width: 100%;
-          border-right: solid 1px black;
-          animation: type 1s steps(8) 1 forwards;
-          overflow: hidden; }
-    .panel--right .about {
-      height: 50rem;
-      color: #282c37; }
-      .panel--right .about__primary-heading {
-        font-family: "Julius Sans One", sans-serif;
-        text-align: center;
-        font-size: 5rem;
-        color: #282c37;
-        margin-bottom: 8rem;
-        letter-spacing: 1rem;
-        text-transform: uppercase;
-        opacity: .6; }
-      .panel--right .about__secondary-heading {
-        font-family: "Julius Sans One", sans-serif;
-        display: inline-block;
-        font-size: 1.6rem;
-        color: #011638;
-        border-bottom: dashed 1px #9055A2;
-        padding-bottom: 2px;
-        letter-spacing: .6rem; }
-      .panel--right .about__bio {
-        padding: 1rem 0;
-        font-size: 1.2rem;
-        margin-bottom: 2rem; }
-    .panel--right .projects__heading {
-      font-family: "Julius Sans One", sans-serif;
-      text-align: center;
-      font-size: 5rem;
-      color: #282c37;
-      margin-bottom: 8rem;
-      letter-spacing: 1rem;
-      text-transform: uppercase;
-      opacity: .6; }
-    .panel--right .projects__img {
-      height: 20rem;
-      width: 30rem;
-      border: solid 2px #D499B9;
-      box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.8);
-      margin: 0 auto; }
-      .panel--right .projects__img img {
-        width: 100%;
-        height: 100%;
-        transition: all .2s linear; }
-        .panel--right .projects__img img:hover {
-          transform: scale(1.8);
-          height: 100%;
-          width: auto;
-          box-shadow: 0 0 2rem rgba(0, 0, 0, 0.8); }
-    .panel--right .projects__info__item {
-      font-size: 1.4rem; }
-      .panel--right .projects__info__item a, .panel--right .projects__info__item a:link, .panel--right .projects__info__item a:visited {
-        text-transform: capitalize;
-        color: #011638; }
-      .panel--right .projects__info__item h2 {
-        font-size: 1.6rem;
-        text-transform: uppercase;
-        display: inline-block; }
-      .panel--right .projects__info__item span {
-        color: #011638;
-        text-transform: uppercase; }
-        .panel--right .projects__info__item span + span {
-          color: #9055A2; }
-      .panel--right .projects__info__item:not(:last-child) {
-        margin-bottom: .5rem; }
-    .panel--right .contact__heading {
-      font-family: "Julius Sans One", sans-serif;
-      text-align: center;
-      font-size: 5rem;
-      color: #282c37;
-      margin-bottom: 8rem;
-      letter-spacing: 1rem;
-      text-transform: uppercase;
-      opacity: .6; }
+.landing-page__primary-heading {
+  animation: shine 3s cubic-bezier(0.645, 0.045, 0.355, 1) infinite forwards; }
+
+.landing-page__secondary-heading {
+  animation: shine 3s cubic-bezier(0.645, 0.045, 0.355, 1) infinite reverse forwards; }
