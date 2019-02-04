@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #000;
+  background: $secondary-color;
   flex-direction: column;
   color: white;
 }
@@ -16,19 +16,19 @@
     font-size: 6rem;
     letter-spacing: 1rem;
     overflow: hidden;
-    background: linear-gradient(90deg,#000,#fff,#000);
+    background: linear-gradient(90deg,$primary-color,#fff,$primary-color);
     background-size: 80%;
     background-repeat: no-repeat;
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: rgba(255,255,255,0);
+    -webkit-text-fill-color: rgba($primary-color,0);
     margin-bottom: 4rem;
   }
   &__primary-heading{
-    animation: shine 3s  cubic-bezier(0.645, 0.045, 0.355, 1)  infinite  forwards;
+    animation: shine 4s  cubic-bezier(0.645, 0.045, 0.355, 1)  infinite  forwards;
   }
   &__secondary-heading{
-    animation: shine 3s  cubic-bezier(0.645, 0.045, 0.355, 1)  infinite reverse forwards;
+    animation: shine 4s  cubic-bezier(0.645, 0.045, 0.355, 1)  infinite reverse forwards;
   }
 }
 // animation: shine 3s  linear  infinite  forwards;

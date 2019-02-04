@@ -1,5 +1,5 @@
 .load-wrapper{
-  background: blue;
+  background: $primary-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
   position: relative;
   display: flex;
   span{
-    color:blue;
+    color:$primary-color;
     margin: 0 1.5rem;
     font-size: 10rem;
     font-weight: bold;
