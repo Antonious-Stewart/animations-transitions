@@ -47,3 +47,30 @@
     }
   }
 }
+.bg{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(90deg,$secondary-color,$quarternary-color);
+  animation: bg 20s linear  infinite;
+  &::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    border-top: 100vh solid transparent;
+    border-left: 100vh solid #fff;
+    opacity: .1;
+  }
+  &::after{
+    content:"";
+    position: absolute;
+    bottom:0;
+    right:0;
+    border-top: 100vh solid transparent;
+    border-right: 100vh solid #fff;
+    opacity: .1;
+  }
+}
