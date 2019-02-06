@@ -18,7 +18,7 @@ body {
 .container {
   width: 100%;
   height: 100vh;
-  background: #008c9e;
+  position: relative;
 }
 
 @-webkit-keyframes shine {
@@ -75,6 +75,36 @@ body {
   }
 }
 
+@-webkit-keyframes bg {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes bg {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  50% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+}
+
 .btn, .btn:link, .btn:visited {
   display: inline-block;
   border: solid 2px white;
@@ -103,6 +133,7 @@ body {
 
 .menu {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: -50%;
   width: 50%;
@@ -212,6 +243,113 @@ body {
   left: 0;
 }
 
+.header {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.header .block {
+  width: 25rem;
+  height: 25rem;
+  margin: 1.5em;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border: double #fff 8px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.8);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.header .block:hover {
+  -webkit-transform: rotate(45deg) scale(1.1);
+          transform: rotate(45deg) scale(1.1);
+}
+
+.header .block:hover::before {
+  -webkit-animation: bg 20s infinite;
+          animation: bg 20s infinite;
+}
+
+.header .block:nth-child(1) {
+  z-index: -1;
+}
+
+.header .block:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/MHWLac7a.gif") center/cover no-repeat;
+  -webkit-transform: rotate(-45deg) scale(1.39);
+          transform: rotate(-45deg) scale(1.39);
+}
+
+.header .block:nth-child(1):hover {
+  z-index: 1;
+}
+
+.header .block:nth-child(3) {
+  z-index: -1;
+}
+
+.header .block:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../imgs/l6Xgvswa.gif") center/cover no-repeat;
+  -webkit-transform: rotate(-45deg) scale(1.4);
+          transform: rotate(-45deg) scale(1.4);
+}
+
+.header .block:nth-child(3):hover {
+  z-index: 1;
+}
+
+.header .block__heading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+          transform: translate(-50%, -50%) rotate(-45deg);
+  text-align-last: center;
+  width: 100%;
+  font-size: 2.8rem;
+  font-family: "Press Start 2P",cursive;
+  color: #fff;
+}
+
+.header .block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#008c9e), to(#005f6b));
+  background: linear-gradient(90deg, #008c9e, #005f6b);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
 .load-wrapper {
   background: #343838;
   display: -webkit-box;
@@ -291,6 +429,38 @@ body {
 .loader span:nth-child(10) {
   -webkit-animation-delay: 1.8s;
           animation-delay: 1.8s;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#005f6b), to(#00dffc));
+  background: linear-gradient(90deg, #005f6b, #00dffc);
+  -webkit-animation: bg 20s linear  infinite;
+          animation: bg 20s linear  infinite;
+}
+
+.bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 100vh solid transparent;
+  border-left: 100vh solid #fff;
+  opacity: .1;
+}
+
+.bg::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top: 100vh solid transparent;
+  border-right: 100vh solid #fff;
+  opacity: .1;
 }
 
 .landing-container {
