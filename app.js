@@ -7,7 +7,7 @@ window.onload = () =>{
     document.querySelector(".container").style.display = "block";
     document.querySelector(".menu").style.display = "block";
     document.querySelector(".bg").style.display = "block";
-  },8000);
+  },Math.floor(Math.random() * 6000) + 1000);
 }
 function toogleDiv(){
   const element = document.querySelector(".menu");
